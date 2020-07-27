@@ -1,0 +1,165 @@
+<html>
+<head>
+	<title>Ejercicio Simon Says</title>
+	<script type="text/javascript">
+	//dos divisiones, en la de la izquierda se da una sucesion de colores
+	// en la de la derecha hay q repetirla
+	// con el settimeout cambiamos los de la izquierda
+	//para cargar los colores con una matriz  0,1,2,3,4  rojo,verde,amarillo,azul,negro
+	//la matriz se genera aleatoriamente math.random()*n  n=10 y luego multiplicar por 0.4
+
+	//Version 2: meter mas colores 
+
+		var punt=0;
+		var nombre="";
+		var x=0;
+		var secuencia=new Array();
+		var matrizel=new Array();
+		var y=0;
+		var opcion;
+		nombre=prompt('Introduzca su nombre');
+		
+		while(nombre==""||nombre.length>10){
+			if(nombre==""){nombre=prompt('no ha introducido nada');}
+			else{
+			nombre=prompt('Nombre demasiado largo,introduzca otro');}
+		}
+		
+		
+		function colores(){	
+			//alert("adas");
+			var arrayColores=new Array('red','green','blue','yellow','purple');					
+			var cantnum=Math.floor(Math.random()*(7-3)+3);
+			Comenzar.disabled=true;
+			secuencia=new Array();
+			for(i=0;i<cantnum;i++){
+				secuencia[i]=arrayColores[Math.floor(Math.random()*5)];
+				//alert(secuencia[i]);
+			
+			
+			}	
+			x=0;
+			y=0;	
+			numero2.innerHTML="";	
+			nombrejugador.innerHTML=nombre;	
+			cambioColor();
+			
+			
+		}
+		
+		function cambioColor(){
+			if(x<secuencia.length){
+			document.getElementById('div1').style.backgroundColor=secuencia[x];	
+			x=x+1;
+			
+			numero.innerHTML=x;			
+			
+			setTimeout(cambioColor,1000);
+			}
+			else{
+			Comenzar.disabled=false;
+			boton1.disabled=false;
+			boton2.disabled=false;
+			boton3.disabled=false;
+			boton4.disabled=false;
+			boton5.disabled=false;
+			
+			}
+			
+			
+			
+		}
+				
+		
+		function botoneesO(nameboton){
+		//NO HACE EL FINAL---- AHORA SI LO HACE
+			//alert("asddasdas");
+			var gana=true;			
+			matrizel[y]=nameboton;
+			y=y+1;
+			numero2.innerHTML=y;			
+				
+				
+			if(y>=secuencia.length){
+				
+				for(var i=0;i<secuencia.length;i++){
+						if(matrizel[i]!=secuencia[i]){
+							gana=false;	
+							puntos.innerHTML=punt;
+						}	
+																	
+				}
+				if (gana==true){
+								punt=punt+1;
+								puntos.innerHTML=punt;
+								alert('has ganado');}
+								
+				else{alert('fallaste');
+				}
+					boton1.disabled=true;
+					boton2.disabled=true;
+					boton3.disabled=true;
+					boton4.disabled=true;
+					boton5.disabled=true;
+					
+				
+				opcion=parseInt(prompt('Desea cambiar de jugador: \n 1-Si \n 2-No'));	
+					switch(opcion){
+					case 1:		
+							punt=0;
+							x=0;
+							y=0;
+							nombre=prompt('Introduzca su nombre');
+		
+							while(nombre.length>10){
+							nombre=prompt('Nombre demasiado largo,introduzca otro');
+							}
+							colores();
+							break;
+							
+					case 2:break;
+					default:alert('Opcion fuera de parametros');break;
+					}
+				
+			}
+		}		
+	</script>
+</head>
+<body>
+	<h2>SIMON SAYS</h2>
+	<input type="button" name="Comenzar" id="Comenzar"  value="Comenzar" onclick="colores()"style="float:center;margin-left:20px"/>
+	<div name="div1" id="div1" style="float:left;height:50%;width:40%; border-style:solid;background-color:white">
+	<p id="numero" name="numero" style="text-align:center; font-size:62pt"></p>
+	</div>
+	
+	
+	<div name="div2" id="div2" style="float:left;height:48%;width:60px;margin-left:20px; border-style:solid;background-color:white">
+			<form name="form1" id="form1" method="post" action="">			
+			
+			<input type="button" name="boton1"  id="boton1" disabled=true; onclick="botoneesO('red')" style="background-color:red;height:20%;width:100%;display:block"/>
+			<input type="button" name="boton2"  id="boton2" disabled=true; onclick="botoneesO('green')" style="background-color:green;height:20%;width:100%;display:block"/>
+			<input type="button" name="boton3"  id="boton3" disabled=true; onclick="botoneesO('blue')" style="background-color:blue;height:20%;width:100%;display:block"/>
+			<input type="button" name="boton4"  id="boton4" disabled=true; onclick="botoneesO('yellow')" style="background-color:yellow;height:20%;width:100%;display:block"/>
+			<input type="button" name="boton5"  id="boton5" disabled=true; onclick="botoneesO('purple')" style="background-color:purple;height:20%;width:100%;display:block"/>			
+			</form>
+	</div>
+
+	<div name="div3" id="div3" style="float:left;height:48%;width:60px;margin-left:20px; border-style:solid;background-color:#5882FA">
+	<p id="numero2" name="numero2" style="text-align:center; font-size:62pt;width:100%;height:100%"></p>	
+	</div>
+		
+		
+	<div name="puntuacion" id="puntuacion" style="float:left;height:48%;width:100px;margin-left:20px; border-style:solid;background-color:#FAAC58">
+	<p id="nombrejugador" name="nombrejugador" style="text-align:center;font-size:20pt;font-style:italic"></p>
+	<p id="puntos" name="puntos" style="text-align:center;font-size:20pt;font-style:compact"></p>
+		
+	</div>
+	
+	<footer>
+		<div name="pie" id="pie" style="width:60%;height:60%;float:left;align:center">
+		<p>Realizado por ADRIAN DIEZ </p>
+		</div>
+	
+	</footer>
+</body>
+</html>

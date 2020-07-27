@@ -1,0 +1,126 @@
+<html>
+    <head>
+	<meta charset="UTF-8">
+       
+	   <script>
+			 
+			 
+			 //caroussel
+			var i=0;
+			var matrImg = new Array;
+			matrImg[0] = 'culkin1.png';
+			matrImg[1] = 'culkin2.png';
+			matrImg[2] = 'culkin3.png';
+			matrImg[3] = 'culkin4.png';
+			matrImg[4] = 'culkin5.png';
+			matrImg[5] = 'culkin6.png';
+			
+			
+			
+		function cambioImgAde(){
+		
+			
+			i++;
+			
+			if(i==6)
+			{
+			i=0;
+			}
+			document.getElementById('imagen').src = matrImg[i];
+		}
+		
+		function cambioImgAtr(){
+		
+		
+			i--;
+			if(i==-1)
+			{
+			i=5;
+			}
+			document.getElementById('imagen').src = matrImg[i];
+		}
+		
+		function AumenAncho(){
+
+		document.getElementById('imagen').style.height = 500;
+		document.getElementById('imagen').style.width = 500;
+	
+			window.alert(document.getElementById('imagen').style.height);
+			window.alert(document.getElementById('imagen').style.width);
+			
+		}	
+		
+		function DisminAncho(){
+		
+			document.getElementById('imagen').style.height = 100;
+			document.getElementById('imagen').style.width = 100;
+			
+			window.alert(document.getElementById('imagen').style.height);
+			window.alert(document.getElementById('imagen').style.width);
+		}
+	
+
+		
+			 
+	   </script>
+	   
+	</head>
+	
+	<style>
+		
+	#bCambioAde{
+		
+		margin-top:50px;
+		margin-right:200px;
+		float:right;
+		font-size:100px;
+	}
+	 
+	 #bCambioAtr{
+		
+		margin-top:50px;
+		margin-left:200px;
+		float:left;
+		font-size:100px;
+	}
+	
+
+	#imagen{
+	 
+	 margin-top:100px;
+	 width:210px;
+	 height:300px;
+	 
+	 
+	 
+	 }
+	 
+	 #DisminAncho{
+		
+		margin-top:50px;
+		margin-left:200px;
+		float:left;
+		font-size:100px;
+	}
+	
+	#AumenAncho{
+		
+		margin-top:50px;
+		margin-right:200px;
+		float:right;
+		font-size:100px;
+	}
+	
+	</style>
+	
+	<body>
+	
+		<input type="button" id="bCambioAtr" name="c1" value="<" onclick="cambioImgAtr()">
+		<input type="button" id="bCambioAde" name="c2" value=">" onclick="cambioImgAde()">
+		<center><img src="culkin1.png" id="imagen"></center>
+		<input type="button" id="AumenAncho" name="c3" value="+" onclick="AumenAncho()" />
+		<input type="button" id="DisminAncho" name="c4" value="-" onclick="DisminAncho()">
+		
+	</body>
+	
+</html>

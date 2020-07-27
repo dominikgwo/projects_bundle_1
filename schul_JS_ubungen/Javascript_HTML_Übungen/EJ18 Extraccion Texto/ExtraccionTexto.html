@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset="UTF-8">
+    <script type="text/javascript">
+
+/*se tiene una lista de nombres y se desea determinar si un nombre en concreto esta en la lista, y si esta que devuelva la posicion 
+(la lista se debe cargar por teclado y el nombre tambien)
+
+extraer de un texto una parte delimitada por etiquetas 
+*/
+    
+var RF=0;
+var lista= new Array();
+var tamanno = parseInt(prompt("INTRODUZCA TAMAÑO DE ARRAY"));
+for(i=0;i<=tamanno-1;i++)
+
+{
+	var nombreI = prompt("introduzca un Nombre");
+	document.write(nombreI + "\n");
+	lista.push(nombreI);
+	
+}
+
+var nombreB = prompt("introduzca el Nombre que quiere buscar");
+
+
+	for( RF=0; RF < lista.length; RF++ )
+				{
+					if( lista[RF] == nombreB) {
+						document.write("<br>"+"EL NOMBRE ESTÁ EN LA LISTA");
+						document.write("<br>" + "POSICION: "+ (RF+1));
+						break;
+					}
+				}
+				  
+
+
+    </script>
+
+</head>
+
+<body>
+</body>
+</html>

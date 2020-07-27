@@ -1,0 +1,232 @@
+<!-- Nombre: CUADRODETEXTO
+	TELEFONO: CUADRODETEXTO
+				BOTONACEPTAR (Cuando se le de a aceptar se valida) -->
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>David :D </title>
+		
+		<style>
+
+			body{
+
+				background-color:#BDBDBD;
+			}
+
+			#contenido{
+
+				background-color: white;
+				-webkit-box-shadow: 0px 0px 13px 8px rgba(0,0,0,0.36);
+				-moz-box-shadow: 0px 0px 13px 8px rgba(0,0,0,0.36);
+				box-shadow: 0px 0px 13px 8px rgba(0,0,0,0.36);
+				border:5px inset;
+				border-radius:10px;
+				width:300px;
+				margin:0 auto;
+				padding:15px;
+				position: absolute;
+					top: 30%;
+					left: 38%;
+
+			}
+
+			#bAceptar{
+
+				float:right;
+			}
+
+			.cText
+			{
+				
+				width:60%;
+				margin-left: 10px;
+				float:right;
+
+			}
+
+			#formulario1 p{
+
+				text-align: right;
+
+			}
+
+
+		</style>
+
+		<script type="text/javascript">
+
+			var ExpRegNombre=/[A-Z][a-z][a-z]*\s[A-Z][a-z][a-z]*/;
+			var ExpRegTlfn=/^\d{9}$/;
+			var ExpRegWeb=/www\.[a-z|0-9][a-z|0-9]*\.[a-z]{2,4}$/i;
+			var ExpRegCorreo=/^[a-z|0-9|\.|-|_][a-z|0-9|\.|-|_]*@[a-z|0-9|\.|-|_][a-z|0-9|\.|-|_]*\.[a-z]{2,4}$/i;
+			var ExpRegDNI=/[0-9]{8}[a-z]{1}/i;
+
+			var numerosDNI;//Variable para guardar los numeros del DNI
+			var letraDNI;//Variable para guardar el resultado de la division de los numeros y la letra
+
+			var vLetraDNI = new Array();
+
+			vLetraDNI[0]= 'T';
+			vLetraDNI[1]= 'R';
+			vLetraDNI[2]= 'W';
+			vLetraDNI[3]= 'A';
+			vLetraDNI[4]= 'G';
+			vLetraDNI[5]= 'M';
+			vLetraDNI[6]= 'Y';
+			vLetraDNI[7]= 'F';
+			vLetraDNI[8]= 'P';
+			vLetraDNI[9]= 'D';
+			vLetraDNI[10]= 'X';
+			vLetraDNI[11]= 'B';
+			vLetraDNI[12]= 'N';
+			vLetraDNI[13]= 'J';
+			vLetraDNI[14]= 'Z';
+			vLetraDNI[15]= 'S';
+			vLetraDNI[16]= 'Q';
+			vLetraDNI[17]= 'V';
+			vLetraDNI[18]= 'H';
+			vLetraDNI[19]= 'L';
+			vLetraDNI[20]= 'C';
+			vLetraDNI[21]= 'K';
+			vLetraDNI[22]= 'E';
+
+
+			function fBotonAceptar()
+			{
+
+				
+
+				//valido el nombre
+				if (document.getElementById("nombre").value=="")
+				{
+					alert("No puedes dejar campos vacios. Introduce tu nombre.");
+					return false;//Para que no deje enviarlo
+				}
+				else if(!ExpRegNombre.test(document.getElementById("nombre").value))
+				{
+					alert("Introduce un nombre valido. Nombre y Apellido (Primera letra mayuscula).");
+					return false;//Para que no deje enviarlo
+				}
+
+
+				//valido el telefono
+				if (document.getElementById("telefono").value=="")
+				{
+					alert("No puedes dejar campos vacios. Introduce tu telefono.");
+					return false;//Para que no deje enviarlo
+				}
+				else if(!ExpRegTlfn.test(document.getElementById("telefono").value))
+				{
+					alert("Introduce un telefono valido.  9 caracteres.");
+					return false;//Para que no deje enviarlo
+				}
+
+				//valido la pagina web
+				if (document.getElementById("pagWeb").value=="")
+				{
+
+				}
+				else if(!ExpRegWeb.test(document.getElementById("pagWeb").value))
+				{
+					alert("Introduce una pagina web valida.");
+					return false;//Para que no deje enviarlo
+				}
+
+				//valido el email
+				if (document.getElementById("eMail").value=="")
+				{
+					alert("No puedes dejar campos vacios. Introduce tu correo.(ejemplo123@ejemplo.com)");
+					return false;//Para que no deje enviarlo
+				}
+				else if(!ExpRegCorreo.test(document.getElementById("eMail").value))
+				{
+					alert("Introduce un correo valido. (ejemplo123@ejemplo.com)");
+					return false;//Para que no deje enviarlo
+				}
+
+
+
+				//valido el DNI
+				if (document.getElementById("dni").value=="")
+				{
+					alert("No puedes dejar campos vacios. Introduce tu DNI.(XXXXXXXXA)");
+					return false;//Para que no deje enviarlo
+				}
+				else if (!ExpRegDNI.test(document.getElementById("dni").value))
+				{
+						alert("Introduce un DNI correcto. Introduce tu DNI.(XXXXXXXXA)");
+						return false;//Para que no deje enviarlo	
+				}
+				else if (ExpRegDNI.test(document.getElementById("dni").value))
+				{
+					
+					numerosDNI=parseInt(document.getElementById("dni").value.substring(0,9));
+					letraDNI=numerosDNI%23;
+					//alert(letraDNI);
+					if (vLetraDNI[letraDNI]!=document.getElementById("dni").value.substring(8))
+					{
+						alert("Introduce un DNI correcto. Introduce tu DNI.(XXXXXXXXA)");
+						return false;//Para que no deje enviarlo	
+					}
+
+				}
+
+				alert("Datos correctos");
+				document.getElementById("formulario1").reset();
+				return true;
+
+
+			}
+
+
+		</script>
+		
+	</head>
+
+	<body>
+		<div id="contenido">
+			<form id="formulario1">
+
+				<p>
+
+					Nombre: <input type="text" id="nombre" class="cText">
+
+				</p>
+
+				<p>
+
+					DNI: <input type="text" id="dni" class="cText">
+
+				</p>
+
+				<p>
+
+					Telefono: <input type="text" id="telefono" class="cText">
+
+				</p>
+
+				<p>
+
+					Tu página web: <input type="text" id="pagWeb" class="cText">
+
+				</p>
+
+				<p>
+
+					E-mail: <input type="text" id="eMail" class="cText">
+
+				</p>
+
+				<p>
+
+					<input type="button" id="bAceptar" value="Aceptar" onclick="fBotonAceptar()">
+
+				</p>
+
+			</form>
+
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,302 @@
+<html>
+    <head>
+	<meta charset="UTF-8">
+	   <script>
+
+			 var i=0;
+			 var matrImg = new Array;
+			 var control1;
+			 var control2;
+			 var control3;
+			 var control4;
+			 var control5;
+			 var control6;
+			 var control7;
+			 var control8;
+			 var control9;
+			 var control10;
+			 var control11;
+			 var control12;
+			matrImg[0] = "url('1.jpg')";
+			matrImg[1] = "url('2.jpg')";
+			matrImg[2] = "url('3.jpg')";
+			matrImg[3] = "url('4.jpg')";
+			matrImg[4] = "url('5.jpg')";
+			matrImg[5] = "url('6.jpg')";
+			matrImg[6] = "url('7.jpg')";
+			matrImg[7] = "url('8.jpg')";
+			matrImg[8] = "url('9.jpg')";
+			matrImg[9] = "url('10.jpg')";
+			matrImg[10] = "url('11.jpg')";
+			matrImg[11] = "url('12.jpg')";
+			function cambiarImagen1(){				
+						
+						if(document.getElementById('cuadrado1').style.backgroundImage = matrImg[0])
+						{control1=0;}
+						else{control1=1;}
+						
+						i++;
+						if(i==12)
+						{i=0;}
+						document.getElementById('cuadrado1').style.backgroundImage = matrImg[i];
+						
+						
+			 } 
+			 function cambiarImagen2(){
+						
+						if(document.getElementById('cuadrado2').style.backgroundImage = matrImg[1])
+						{control2=0;}
+						else{control2=1;}
+						
+						i++;					
+						if(i==12)
+						{i=0;}	
+						document.getElementById('cuadrado2').style.backgroundImage = matrImg[i];
+			 } 
+			 function cambiarImagen3(){
+					
+						if(document.getElementById('cuadrado3').style.backgroundImage = matrImg[2])
+						{control3=0;}
+						else{control3=1;}
+						
+							i++;
+						if(i==12)
+						{i=0;}
+						document.getElementById('cuadrado3').style.backgroundImage = matrImg[i]; 
+			 } 
+			 function cambiarImagen4(){
+						
+						if(document.getElementById('cuadrado4').style.backgroundImage = matrImg[3])
+						{control4=0;}
+						else{control4=1;}
+						
+						i++;
+						if(i==12)
+						{i=0;}
+						document.getElementById('cuadrado4').style.backgroundImage = matrImg[i];
+			 } 
+			 function cambiarImagen5(){
+					
+						if(document.getElementById('cuadrado5').style.backgroundImage = matrImg[4])
+						{control5=0;}
+						else{control1=5;}
+						
+							i++;
+						if(i==12)
+						{i=0;}
+						document.getElementById('cuadrado5').style.backgroundImage = matrImg[i];
+			 } 
+			 function cambiarImagen6(){
+						
+						if(document.getElementById('cuadrado6').style.backgroundImage = matrImg[5])
+						{control6=0;}
+						else{control6=1;}
+						
+						i++;
+						if(i==12)
+						{i=0;}
+						document.getElementById('cuadrado6').style.backgroundImage = matrImg[i];
+			 } 
+			 function cambiarImagen7(){
+						
+						if(document.getElementById('cuadrado7').style.backgroundImage = matrImg[6])
+						{control7=0;}
+						else{control7=1;}
+						
+						i++;
+						if(i==12)
+						{i=0;}
+						document.getElementById('cuadrado7').style.backgroundImage = matrImg[i];
+			 }
+			 function cambiarImagen8(){	
+						
+						if(document.getElementById('cuadrado8').style.backgroundImage = matrImg[7])
+						{control8=0;}
+						else{control8=1;}
+						
+						i++;
+						if(i==12)
+						{i=0;}
+						document.getElementById('cuadrado8').style.backgroundImage = matrImg[i];
+			 } 
+			 function cambiarImagen9(){
+						
+						if(document.getElementById('cuadrado9').style.backgroundImage = matrImg[8])
+						{control9=0;}
+						else{control9=1;}
+						
+						i++;
+						if(i==12)
+						{i=0;}
+						document.getElementById('cuadrado9').style.backgroundImage = matrImg[i];
+			 } 
+			 function cambiarImagen10(){
+					
+						if(document.getElementById('cuadrado10').style.backgroundImage = matrImg[9])
+						{control10=0;}
+						else{control10=1;}
+						
+							i++;
+						if(i==12)
+						{i=0;}
+						document.getElementById('cuadrado10').style.backgroundImage = matrImg[i];
+			 } 
+			 function cambiarImagen11(){
+						
+						if(document.getElementById('cuadrado11').style.backgroundImage = matrImg[10])
+						{control11=0;}
+						else{control11=1;}
+						
+						i++;
+						if(i==12)
+						{i=0;}
+						document.getElementById('cuadrado11').style.backgroundImage = matrImg[i];
+			 }
+			 function cambiarImagen12(){
+			
+						if(document.getElementById('cuadrado12').style.backgroundImage = matrImg[11])
+						{control12=0;}
+						else{control12=1;}
+						
+									i++;
+						if(i==12)
+						{i=0;}
+						document.getElementById('cuadrado12').style.backgroundImage = matrImg[i];
+			 }
+			 function comprobar(){
+				
+				if(control1==0&&control2==0&&control3==0&&control4==0&&control5==0&&control6==0&&control7==0&&control8==0&&control9==0&&control10==0&control11==0&&control12==0)
+				{
+					document.getElementById('grande').style.border = "5px solid green";
+					window.alert("CORRECTO");
+				}
+			 }
+	   </script>
+	</head>
+	<style>
+		body{
+			background-color:#3f51b5;
+		}
+		#grande{
+			margin-top:50px;
+			width:765px;
+			height:512px;
+			border: 2px solid black;
+			background-color:white;
+		}
+		#cuadrado1{
+			margin-left:2px;
+			margin-top:6px;
+			width:251px;
+			height:124px;
+			float:left;
+			background-image:url('10.jpg');
+		}	
+		#cuadrado2{			
+			margin-top:6px;
+			margin-left:3px;
+			width:251px;
+			height:124px;
+			float:left;
+			background-image:url('4.jpg');
+		}
+		#cuadrado3{
+			margin-top:6px;
+			margin-left:3px;
+			width:251px;
+			height:124px;
+			float:left;
+			background-image:url('8.jpg');
+		}
+		#cuadrado4{	
+			margin-left:2px;
+			width:251px;
+			height:124px;
+			float:left;
+			background-image:url('1.jpg');
+		}
+		#cuadrado5{
+			margin-left:3px;
+			width:251px;
+			height:124px;
+			float:left;
+			background-image:url('12.jpg');
+		}
+		#cuadrado6{
+			margin-left:3px;
+			width:251px;
+			height:124px;
+			float:left;
+			background-image:url('3.jpg');
+		}
+		#cuadrado7{
+			margin-left:2px;
+			width:251px;
+			height:124px;
+			float:left;
+			background-image:url('6.jpg');
+		}
+		#cuadrado8{	
+			margin-left:3px;
+			width:251px;
+			height:124px;
+			float:left;
+			background-image:url('2.jpg');
+		}
+		#cuadrado9{
+			margin-left:3px;
+			width:251px;
+			height:124px;
+			float:left;
+			background-image:url('5.jpg');
+		}
+		#cuadrado10{
+			margin-left:2px;
+			width:251px;
+			height:124px;
+			float:left;
+			background-image:url('11.jpg');
+		}
+		#cuadrado11{
+			margin-left:3px;
+			width:251px;
+			height:124px;
+			float:left;
+			background-image:url('7.jpg');}
+		#cuadrado12{
+			margin-left:3px;
+			width:251px;
+			height:124px;
+			float:left;
+			background-image:url('9.jpg');}
+		#comprobar{
+			margin-top:20px;
+			width:251px;
+			height:70px;
+			border: 5px solid white;
+			font-size:25px;
+			color:white;	
+			background-color:black;}		
+	</style>	
+	<body>	
+		<center>
+		<div id="grande">
+		<input type="button" id="cuadrado1" name="c1" onclick="cambiarImagen1()"/>
+		<input type="button" id="cuadrado2" name="c1" onclick="cambiarImagen2()">
+		<input type="button" id="cuadrado3" name="c1" onclick="cambiarImagen3()">
+		<input type="button" id="cuadrado4" name="c1" onclick="cambiarImagen4()">
+		<input type="button" id="cuadrado5" name="c1" onclick="cambiarImagen5()">
+		<input type="button" id="cuadrado6" name="c1" onclick="cambiarImagen6()">
+		<input type="button" id="cuadrado7" name="c1" onclick="cambiarImagen7()">
+		<input type="button" id="cuadrado8" name="c1" onclick="cambiarImagen8()">
+		<input type="button" id="cuadrado9" name="c1" onclick="cambiarImagen9()">
+		<input type="button" id="cuadrado10" name="c1" onclick="cambiarImagen10()">
+		<input type="button" id="cuadrado11" name="c1" onclick="cambiarImagen11()">
+		<input type="button" id="cuadrado12" name="c1" onclick="cambiarImagen12()">	 	
+		</div>
+		</center>	
+		<center>
+		<input type="button" id="comprobar" name="c1" value="Comprobar" onclick="comprobar()">
+		</center>	
+	</body>
+</html>

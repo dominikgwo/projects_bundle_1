@@ -1,0 +1,71 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "EZTabs",
+  "options_page": "options.html",
+  "version": "1.0.2",
+  "permissions":["contextMenus","http://*/*","https://*/*","notifications","tabs","storage","alarms","bookmarks","sessions","chrome://favicon/*","chrome://favicon/","tabCapture",
+    "activeTab"],
+  "description": "A Tab Manager with advanced access to pinned tabs and playing tabs including shortcuts ",
+  "icons": {"48": "icon48.png",
+            "128": "icon128.png" },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmhi+IP0AlKDYfDLfnTjvIzgDFOrGjBNtRhgGXJ3R11u9oedjswaVoHCY9SqKbP5nhNg0RnLj2w4nSz+FaCbsR5MSN52oRDLWnMwYqjXYnO8Xl4oIp2uyh1HGvF/sVjaVGqUtdZpae6RmrVAZBScW41jrv9h4g3oRuaw0oCm1T83Jf6DAF6s8DtV9Q9gCb3JI87nMUB0Wxt7dHo+JzVfV5CeS284M0LzEkxujr1+2p5LgMz51ccnH/DK8HqEBPFHC7F/7xVJWmdDGKOGbI2JIPhXr+dcJ4MxGVqttPpSDEqiXuLfsPygPC5OyBYXROvnsixceF9+yzs3Ac2M+RTpXawIDAQAB",
+  "background": {
+    "persistent": true,
+    "scripts": ["background.js"]
+  },
+  
+    "commands":
+	{
+    "goto_tab_pinned":
+    {
+		"suggested_key": {
+            "default": "Ctrl+Shift+3"
+			
+		},
+      "description": "Go to playing tabs"
+    },
+	
+	
+	    "close_tabs_pinned":
+    {
+		"suggested_key": {
+            "default": "Ctrl+Shift+4"
+			
+		},
+      "description": "Close pinned Tabs"
+    },
+	
+	
+	    "goto_tab_audible":
+    {
+		"suggested_key": {
+            "default": "Ctrl+Shift+5"
+			
+		},
+      "description": "Goto Audible Tabs"
+    },
+	
+	    "close_tabs_audible":
+    {
+		"suggested_key": {
+            "default": "Ctrl+Shift+6"
+			
+		},
+      "description": "Close Audible Tabs"
+    }
+
+  },
+
+  
+  "browser_action": {
+    "default_icon": {
+
+    },
+    "default_title": "EZTabs",
+	"default_popup": "popup.html"
+  }
+
+
+}

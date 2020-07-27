@@ -1,0 +1,235 @@
+<html>
+	<head></head>
+	<body>
+	
+		<script>
+      /*los elementos mayores que la media de la matriz, se introducen en una nueva matriz (matriz mayores)
+	  los elementos que sean menores que la media se introducen en una nueva matriz (matriz menores)*/
+	  /*una vez cargada la matriz por pantalla se da a escoger si:
+	  1.hacer lo que estamabos haciendo mostrar la operacion completa
+	  2. mostra la matriz primero mayores luego menores
+	  3. invertir la matriz cargada*/		
+			var x
+			var introducir;
+			var array = new Array();
+			var talla = new Array();
+			talla['S'] = 36;
+			talla['M'] = 38;
+			talla['L'] = 40;
+			talla['XL'] = 42;
+            talla['XXL'] = 44;			
+			var media=0,suma=0;
+			var matriz_mayores=new Array;
+			var matriz_menores=new Array;
+			
+			do{
+				
+				introducir=parseInt(prompt("Introduce numeros (0 para acabar)"));
+				array.push(introducir);
+				
+			}while(introducir!=0);
+			
+			array.pop();
+			
+			// media
+			for(x=0;x<array.length;x++){
+				
+				suma = suma + parseInt(array[x]);
+				
+			}
+			
+			media=suma/x;
+			
+			//mayores y menores que la media
+			for(x=0;x<array.length;x++){
+				
+				if(array[x]>=media){
+					matriz_mayores.push(array[x]);
+				}
+				else{
+					matriz_menores.push(array[x]);
+				}
+				
+			}
+			var menu=parseInt(prompt("Escoge una opcion:\n1. Mostrar la Matriz\n2. Mostrar la matriz al reves\n3. Invertir matriz\n4. Ordenar Metodo burbuja\n5. Seleccionar Tallas"));
+			
+			if (menu==1){
+			
+			//Mostrar la Matriz
+			document.write('Matriz original' + '<br>');
+			
+			for(x=0;x<array.length;x++){
+				
+				document.write(array[x] + '<br>');
+				
+			}
+			
+			//mostrar la media
+			document.write('<br>');
+			document.write('La media es ' + media + '<br>');
+				
+			document.write('<br>');
+			
+			//mostrar matriz mayores
+			document.write('Mayores o iguales que la media:' + '<br>');
+			
+			for(x=0;x<matriz_mayores.length;x++){
+				
+				document.write(matriz_mayores[x] + '<br>');
+				
+			}
+			
+			document.write('<br>');
+			
+			//mostrar matriz menores
+			document.write('Menores que la media:' + '<br>');
+			
+			for(x=0;x<matriz_menores.length;x++){
+				
+				document.write(+ matriz_menores[x] + '<br>');
+				
+			}
+			
+		}//fin if
+		
+////MENU = 2
+
+		if(menu==2){
+
+			//mostrar matriz menores
+			document.write('Menores que la media:' + '<br>');
+			
+			for(x=0;x<matriz_menores.length;x++){
+				
+				document.write(+ matriz_menores[x] + '<br>');
+				
+			}
+		
+			document.write('<br>');
+			
+			//mostrar matriz mayores
+			document.write('Mayores o iguales que la media:' + '<br>');
+			
+			for(x=0;x<matriz_mayores.length;x++){
+				
+				document.write(matriz_mayores[x] + '<br>');
+				
+			}
+			
+			//mostrar la media
+			document.write('<br>');
+			document.write('La media es ' + media + '<br>');
+			
+			document.write('<br>');
+			
+			//mostrar la matriz original
+			document.write('Matriz original' + '<br>');
+			
+			for(x=0;x<array.length;x++){
+				
+				document.write(array[x] + '<br>');
+				
+			}
+			
+		}//fin if
+		
+////menu = 3
+
+		if(menu==3){
+		
+			//mostrar la matriz original
+			document.write('Matriz original' + '<br>');
+			
+			for(x=0;x<array.length;x++){
+				
+				document.write(array[x] + '<br>');
+				
+			}
+			
+			document.write('<br>');
+			
+			//mostrar matriz invertida
+			document.write('Matriz invertida' + '<br>');
+			
+			for(x=array.length-1;x>=0;x--){
+			
+				document.write(array[x] + '<br>');
+			
+			}			
+		
+		}
+		
+////4		
+		if (menu==4){
+			
+			//mostrar la matriz original
+			document.write('Matriz original' + '<br>');
+			
+			for(x=0;x<array.length;x++){
+				
+				document.write(array[x] + '<br>');
+				
+			}
+		
+			//Ordenar la matriz por el método burbuja
+			var j, k, aux;
+			
+			for(j=0;j<array.length-1;j++){
+			
+				for(k=0;k<array.length-j-1;k++){
+				
+					if(array[k+1]<array[k]){
+					
+						aux=array[k+1];
+						array[k+1]=array[k];
+						array[k]=aux;
+					}//fin if
+				}//fin for k
+			}//fin for j
+			
+			document.write('<br>');
+			
+			//mostrar la matriz ordenada
+			document.write('Matriz ordenada' + '<br>');
+			
+			for(x=0;x<array.length;x++){
+				
+				document.write(array[x] + '<br>');
+				
+			}
+			
+		}//fin if
+			
+			if(menu == 5)
+			{
+			
+		    //matriz original
+			document.write('Matriz original' + '<br>');
+			
+			for(x=0;x<array.length;x++){
+				
+				document.write(array[x] + '<br>');
+				
+			}
+			
+			//tallas
+			
+			document.write('Matriz con sus respectivas tallas' + '<br>');
+			for(item in talla)
+			{
+			
+			
+			 document.write(item + "<br>");
+			 
+			}
+			
+			
+			
+			}//fin if
+			
+			
+			</script>
+	
+	</body>
+
+</html>

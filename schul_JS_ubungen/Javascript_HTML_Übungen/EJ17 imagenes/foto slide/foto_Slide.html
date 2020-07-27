@@ -1,0 +1,100 @@
+
+
+<html>
+
+	<head>
+		<title> IMAGENES </title>
+
+		<script type="text/javascript">
+
+			var imagen=new Array(0,1,2,3);
+				imagen[0]="uno.jpg";
+				imagen[1]="dos.jpg";
+				imagen[2]="tres.jpeg";
+				imagen[3]="cuatro.jpg";
+			
+			var ContadorDelante=0;
+			var ContadorDetras=4;
+			
+			
+				function adelante(){
+				
+					ContadorDelante=ContadorDelante+1;
+					document.getElementById("foto1").src=imagen[ContadorDelante];
+					
+					if(ContadorDelante==4){
+						ContadorDelante=0;
+						document.getElementById("foto1").src=imagen[ContadorDelante];
+					}
+				}
+				
+				function atras(){
+			
+					ContadorDetras=ContadorDetras-1;
+					
+					
+					if(ContadorDetras==0){
+						ContadorDetras=3;
+					}
+					document.getElementById("foto1").src=imagen[ContadorDetras];
+						
+				}
+				
+				function mas(){
+				
+				document.getElementById("foto1").width =document.getElementById("foto1").width+100;
+				document.getElementById("foto1").height =document.getElementById("foto1").height+100;
+					
+					
+						
+				}
+				
+				function menos(){
+					
+						document.getElementById("foto1").width =document.getElementById("foto1").width-100;
+						document.getElementById("foto1").height =document.getElementById("foto1").height-100;
+				}
+				
+				
+		</script>
+	</head>
+	
+	
+	<style>
+	
+		#b1{
+			width:40px;
+			height:40px;
+		}
+		
+	 #b2{
+			width:40px;
+			height:40px;
+		}
+	 
+	  #b3{
+			width:40px;
+			height:40px;
+		}
+	 
+	  #b4{
+			width:40px;
+			height:40px;
+		}
+	 
+	</style>
+	
+	<body>
+	
+	
+	<input style="color: #003366; background-color: #99CCFF"  value="<- -"name="button1" type="button" onclick="atras()" id="b1"/>
+		<img src="uno.jpg" id="foto1" height="500px" width="500px">
+	
+	<input style="color: #003366; background-color: #99CCFF" value="- ->" name="button2" type="button" onclick="adelante()" id="b2"/>
+	
+	<input style="color: #003366; background-color: #99CCFF" value="+" name="button3" type="button" onclick="mas()" id="b3"/>
+	<input style="color: #003366; background-color: #99CCFF" value="-" name="button4" type="button" onclick="menos()" id="b4"/>
+
+	</body>
+
+</html>

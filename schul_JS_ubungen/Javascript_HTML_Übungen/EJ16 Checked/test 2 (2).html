@@ -1,0 +1,443 @@
+<html>
+    <head>
+	<meta charset="UTF-8">
+       
+	   <script>
+	         
+		
+			 var check1="";
+			 var check2="";
+			 var check3="";
+			 var check4="";
+			 var check5="";
+			 var check6="";
+			 var control1;
+			 var control2;
+			 var control3;
+			 var control4;
+			 var control5;
+			 var control6;
+			
+              function pregunta1(){			
+				/*pregunta 1*/
+			    if (document.getElementById("uno").checked){
+					control1=0;
+					check1="";
+					}
+				if (document.getElementById("dos").checked){
+					control1=0;
+					check1="";
+					}
+				if (document.getElementById("tres").checked){
+					control1=0;
+					check1="";
+					}
+				if (document.getElementById("cuatro").checked){
+					check1="R.F.C. Celta de Vigo";
+					control1=1;
+					}
+					
+				}	
+				
+				function pregunta2(){	
+				/*pregunta 2*/
+				if (document.getElementById("cinco").checked){
+					control2=0;
+					check2="";
+					}
+				if (document.getElementById("seis").checked){
+					control2=0;
+					check2="";
+					}
+				if (document.getElementById("siete").checked){
+					check2="120km";
+					control2=1;
+					}
+				if (document.getElementById("ocho").checked){
+					control2=0;
+					check2="";
+					}
+				}
+				
+				function pregunta3(){	
+				/*pregunta 3*/
+				if (document.getElementById("nueve").checked){
+					control3=0;
+					check3="";
+					}
+				if (document.getElementById("diez").checked){
+					control3=0;
+					check3="";
+					}
+				if (document.getElementById("once").checked){
+					control3=0;
+					check3="";
+					}
+				if (document.getElementById("doce").checked){
+					check3="7";
+					control3=1;
+					}
+				}	
+				
+				function pregunta4(){	
+				/*pregunta 4*/
+				if (document.getElementById("trece").checked){
+					control4=0;
+					check4="";
+					}
+				if (document.getElementById("catorce").checked){
+					control4=0;
+					check4="";
+					}
+				if (document.getElementById("quince").checked){
+					check4="Coca Cola y Vino";
+					control4=1;
+					}
+				if (document.getElementById("dieciseis").checked){
+					control4=0;
+					check4="";			   }
+					}
+					
+				function pregunta5(){	
+				/*pregunta 5*/
+				if (document.getElementById("lista1").selected){
+					control5=0;
+					check5="";
+					}
+				if (document.getElementById("lista2").selected){
+					control5=0;
+					check5="";
+					}
+				if (document.getElementById("lista3").selected){
+					check5="";
+					control5=0;
+					}
+				if (document.getElementById("lista4").selected){
+					control5=1;
+					check5="1992";			   }
+					}
+					
+				function pregunta6(){	
+				/*pregunta 6*/
+				if (document.getElementById("v1").checked){
+					control6=0;
+					check6="";
+					}
+				if (document.getElementById("v2").checked){
+					control6=0;
+					check6="";
+					}
+				if (document.getElementById("v3").checked){
+					check6="Mucho"
+					control6=1;
+					}
+				if (document.getElementById("v4").checked){
+					control6=1;
+					check6="Mucho";		}
+					}
+				
+				
+             function comprobar(){				
+			 
+			 if(checkoption1.checked && checkoption2.checked){
+			 
+				if(control1 == 0){
+			 document.getElementById('caja1').style.backgroundColor = '#E57373';
+			 }
+			 if(control1 == 1){
+			 document.getElementById('caja1').style.backgroundColor = '#81c784';
+			 }
+			 
+			 if(control2 == 0){
+			 document.getElementById('caja2').style.backgroundColor = '#E57373';
+			 }
+			 if(control2 == 1){
+			 document.getElementById('caja2').style.backgroundColor = '#81c784';
+			 }
+			 
+			 if(control3 == 0){
+			 document.getElementById('caja3').style.backgroundColor = '#E57373';
+			 }
+			 if(control3 == 1){
+			 document.getElementById('caja3').style.backgroundColor = '#81c784';
+			 }
+			 
+			 if(control4 == 0){
+			 document.getElementById('caja4').style.backgroundColor = '#E57373';
+			 }
+			 if(control4 == 1){
+			 document.getElementById('caja4').style.backgroundColor = '#81c784';
+			 }
+			 
+			 if(control5 == 0){
+			 document.getElementById('caja5').style.backgroundColor = '#E57373';
+			 }
+			 if(control5 == 1){
+			 document.getElementById('caja5').style.backgroundColor = '#81c784';
+			 }
+			 
+			 if(control6 == 0){
+			 document.getElementById('caja6').style.backgroundColor = '#E57373';
+			 }
+			 if(control6 == 1){
+			 document.getElementById('caja6').style.backgroundColor = '#81c784';
+			 }
+			 
+			 document.formulario.area.value=check1+"\n"+check2+"\n"+check3+"\n"+check4+"\n"+check5+"\n"+check6;
+			 
+			 }
+			 
+			 if (checkoption1.checked)
+			 {
+				if(control1 == 0){
+			 document.getElementById('caja1').style.backgroundColor = '#E57373';
+			 }
+			 if(control1 == 1){
+			 document.getElementById('caja1').style.backgroundColor = '#81c784';
+			 }
+			 
+			 if(control2 == 0){
+			 document.getElementById('caja2').style.backgroundColor = '#E57373';
+			 }
+			 if(control2 == 1){
+			 document.getElementById('caja2').style.backgroundColor = '#81c784';
+			 }
+
+			  document.getElementById('caja3').style.backgroundColor = 'White';
+			  document.getElementById('caja4').style.backgroundColor = 'White';
+			 
+			 document.formulario.area.value=check1+"\n"+check2;
+			 
+			 }
+			 
+			 if (checkoption2.checked)
+			 {
+			 if(control3 == 0){
+			 document.getElementById('caja3').style.backgroundColor = '#E57373';
+			 }
+			 if(control3 == 1){
+			 document.getElementById('caja3').style.backgroundColor = '#81c784';
+			 }
+			 
+			 if(control4 == 0){
+			 document.getElementById('caja4').style.backgroundColor = '#E57373';
+			 }
+			 if(control4 == 1){
+			 document.getElementById('caja4').style.backgroundColor = '#81c784';
+			 }
+				
+				document.getElementById('caja1').style.backgroundColor = 'White';
+				document.getElementById('caja2').style.backgroundColor = 'White';
+			 
+			 document.formulario.area.value=check3+"\n"+check4;
+			 
+			 }
+
+			 
+			 if(document.getElementById("checkoption1").checked && document.getElementById("checkoption2").checked){
+				document.formulario.area.value=check1+"\n"+check2+"\n"+check3+"\n"+check4;
+				
+				if(control1 == 0){
+			 document.getElementById('caja1').style.backgroundColor = '#E57373';
+			 }
+			 if(control1 == 1){
+			 document.getElementById('caja1').style.backgroundColor = '#81c784';
+			 }
+			 
+			 if(control2 == 0){
+			 document.getElementById('caja2').style.backgroundColor = '#E57373';
+			 }
+			 if(control2 == 1){
+			 document.getElementById('caja2').style.backgroundColor = '#81c784';
+			 }
+			 
+			 if(control3 == 0){
+			 document.getElementById('caja3').style.backgroundColor = '#E57373';
+			 }
+			 if(control3 == 1){
+			 document.getElementById('caja3').style.backgroundColor = '#81c784';
+			 }
+			 
+			 if(control4 == 0){
+			 document.getElementById('caja4').style.backgroundColor = '#E57373';
+			 }
+			 if(control4 == 1){
+			 document.getElementById('caja4').style.backgroundColor = '#81c784';
+			 }
+			
+			 
+			 if(control5 == 0){
+			 document.getElementById('caja5').style.backgroundColor = '#E57373';
+			 }
+			 if(control5 == 1){
+			 document.getElementById('caja5').style.backgroundColor = '#81c784';
+			 }
+			 
+			 if(control6 == 0){
+			 document.getElementById('caja6').style.backgroundColor = '#E57373';
+			 }
+			 if(control6 == 1){
+			 document.getElementById('caja6').style.backgroundColor = '#81c784';
+			 }
+			 
+			 document.formulario.area.value=check1+"\n"+check2+"\n"+check3+"\n"+check4+"\n"+check5+"\n"+check6;
+				
+				}
+
+			 
+			 }
+			 
+			 
+	   </script>
+	   
+	</head>
+	<style>
+	
+	  body{
+		background-color:#64b5f6;
+	 }
+	
+	 #caja1{
+	 border:2px solid black;
+	 background-color:white;
+	 }
+	 #caja2{
+	 border:2px solid black;
+	 background-color:white;
+	 }
+	  #caja3{
+	 border:2px solid black;
+	 background-color:white;
+	 }
+	 #caja4{
+	 border:2px solid black;
+	 background-color:white;
+	 }
+	 #caja5{
+	 border:2px solid black;
+	 background-color:white;
+	 }
+	 #caja6{
+	 border:2px solid black;
+	 background-color:white;
+	 }
+	 #boton{
+	 border:2px solid black;
+	 
+	 }
+	 #area{
+	 width:300px;
+	 height:100px;
+	 border:2px solid black;
+	 margin-left:4px;
+	 }
+	 
+	 #comprobar{
+	 border:2px solid black;
+	 background-color:white;
+	 width:250px;
+	 height:100px;
+	 float:left;
+	 margin-top:130px;
+	 margin-left:500px;
+	 }
+	 
+	 #tabla{
+	 float:left;
+	 position:absolute;
+	 }
+	 
+	 #parte{
+	 margin-top:20px;
+	 }
+	
+	 
+	</style>
+	<body onload="pregunta1()">
+	
+	    <form name="formulario" method="POST">
+		<center>
+			<table id="tabla">
+				<tr>
+					<td id="caja1">
+					<p> 1. Que Equipo de Futbol no pertenece a Madrid</p>
+					<p><input type="radio" id="uno" name="opcion1"> F.C. Real Madrid</p>
+					<p><input type="radio" id="dos" name="opcion1">C.F. Atletico de Madrid</p>
+					<p><input type="radio" id="tres" name="opcion1">Rayo Vallecano </p>
+					<p><input type="radio" id="cuatro" name="opcion1">R.F.C. Celta de Vigo </p>
+					</td>
+				</tr>
+				
+				<tr>
+				    <td id="caja2">
+					<p> 2. Cual es la velocidad maxima de autopista?</p>
+					<p><input type="radio" id="cinco" name="opcion2"> 80km/h</p>
+					<p><input type="radio" id="seis" name="opcion2"> 160km/h</p>
+					<p><input type="radio" id="siete" name="opcion2">120km/h</p>
+					<p><input type="radio" id="ocho" name="opcion2"> 130km/h</p>
+					</td>
+				</tr>
+				
+				<tr>
+				    <td id="caja3">
+					<p> 3. Cuantos colores tiene el Arcoiris</p>		
+					<p><input type="radio" id="nueve" name="opcion3"> 2</p>
+					<p><input type="radio" id="diez" name="opcion3"> 4</p>
+					<p><input type="radio" id="once" name="opcion3"> 6</p>
+					<p><input type="radio" id="doce" name="opcion3"> 7 </p>
+					</td>
+				</tr>
+				
+				<tr>
+				    <td id="caja4">
+				    <p> 4. Receta del Calimocho</p>
+					<p><input type="Radio" id="trece" name="opcion4"> Limon y Vodka</p>
+					<p><input type="Radio" id="catorce" name="opcion4"> Limon y Ron</p>
+					<p><input type="Radio" id="quince" name="opcion4">Coca Cola y vino</p>
+					<p><input type="Radio" id="dieciseis" name="opcion4"> Coca Cola y Ron </p>	
+				    </td>
+				</tr>
+				
+				<tr>
+					<td id="caja5">
+					<p>5. Que año se celebraron los juegos olimpicos de Barcelona?</p>
+					<select class="largo" id="listole">
+					<option id="lista1" value="lista1">9999</option>
+					<option id="lista2" value="lista1">2870</option>
+					<option id="lista3" value="lista1">1994</option>
+					<option id="lista4" value="lista1">1992</option>
+					</select>	
+					</td>
+				</tr>
+				
+				<tr>
+				    <td id="caja6">
+				    <p> 6. Limbert es imbecil?</p>
+					<p><input type="Radio" id="v1" name="opcion5">Si</p>
+					<p><input type="Radio" id="v2" name="opcion5">Si</p>
+					<p><input type="Radio" id="v3" name="opcion5">Mucho</p>
+					<p><input type="Radio" id="v4" name="opcion5">Mucho</p>	
+				    </td>
+				</tr>
+			
+				<tr>
+				    <td>
+					<textarea id="area" class="area"></textarea>
+					</td>
+				</tr>
+				<div id="comprobar">
+				<br><input type="button" id="tres" name="tres" value="Comprobar" onclick="pregunta1(),pregunta2(),pregunta3(),pregunta4(),pregunta5(),pregunta6(),comprobar()">
+				<div id="parte">
+				<span>Pregunta 1 y 2</span><input type="checkbox" id="checkoption1" value="co1">
+				<span>Pregunta 3 y 4</span><input type="checkbox" id="checkoption2" value="co2">
+				</div>
+
+				
+				</div>
+		   </table>
+		   </center>
+	
+	    </form>	
+	</body>
+	
+</html>

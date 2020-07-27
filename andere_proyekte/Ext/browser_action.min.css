@@ -1,0 +1,110 @@
+body{
+	line-height:1.3;
+	margin:9px;
+	width:400px
+}
+
+#auth{
+	color:#7b93d1;
+}
+
+.title{
+	font-size: 15px;
+	color: #E86121;
+	padding-top: 5px;
+	font-weight: 550;
+}
+
+#author{
+	padding-top: 15px;
+	padding-bottom: 10px;
+	color:#888;
+}
+
+#thumbs{
+	padding-top: 10px;
+	display: inline;
+}
+
+#udlnk{
+	color: #E86121;
+}
+
+#form{
+	height:26px;
+	margin-bottom:9px
+}
+
+.up{
+	color:#3c8c45;
+}
+.down{
+	color:#bf504e;
+}
+.up, .down, #and{
+	display:inline;
+}
+
+#query-field{
+	border:1px solid #999;
+	border-radius:3px;
+	display:inline-block;
+	font-size:13px;
+	padding:1px 5px;
+	vertical-align:top;
+	width:240px;
+	height:100%;
+	box-shadow:inset 0 1px 1px rgba(0,0,0,0.1);
+}
+
+#query-field:focus{
+	outline:0;
+	box-shadow:inset 0 1px 3px rgba(0,0,0,0.15)
+}
+
+#define-btn{
+	height:100%;
+	margin-left:9px;
+	padding:1px 20px;
+	vertical-align:top
+}
+#usage-tip,#status-box{
+	padding-top: 5px;
+	margin:13px 0
+	font-size: 13px;
+}
+
+#meaning{
+	margin:9px 0
+}
+
+#usage-tip, #and, #loadtip{
+	color:#888;
+	font-style:italic
+}
+
+#loadtip2{
+	color:#5485ad;
+	font-style:italic
+}
+
+#status-search-link{
+	margin-top:1em
+}
+
+#meaning{
+	border:1px solid #ccc;
+	max-height:300px;
+	overflow-x:hidden;
+	overflow-y:visible;
+	padding:6px;
+	text-overflow:ellipsis
+}
+
+.footer{
+	color:#888;
+	font-size:12px;
+	margin-top:9px;
+	text-align:center
+}
+

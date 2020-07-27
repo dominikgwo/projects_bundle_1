@@ -1,0 +1,406 @@
+<html>
+    <head>
+	<meta charset="UTF-8">
+       
+	   <script>
+			 
+			var i=0;
+			var matrImg = new Array;
+			matrImg[0] = "url('1.jpg')";
+			matrImg[1] = "url('2.jpg')";
+			matrImg[2] = "url('3.jpg')";
+			matrImg[3] = "url('4.jpg')";
+			matrImg[4] = "url('5.jpg')";
+			matrImg[5] = "url('6.jpg')";
+			matrImg[6] = "url('7.jpg')";
+			matrImg[7] = "url('8.jpg')";
+			matrImg[8] = "url('9.jpg')";
+			matrImg[9] = "url('10.jpg')";
+			matrImg[10] = "url('11.jpg')";
+			matrImg[11] = "url('12.jpg')";
+			var control1;
+			var control2;
+			var contador=0;
+			var contadorFallo=5;
+			var contadorAcierto=0;
+			var acierto=0;
+			var id1;
+			var id2;
+			
+			setTimeout(function espera(){document.getElementById("caja5").style.background-image:"tapeteRojo.jpg" }, 2000);
+			
+			function carta1(){if(contador==0){id1="carta1";}if(contador==1){id2="carta1";}if(contador<=1){document.getElementById("carta1").style.backgroundImage = matrImg[2];control1=1;contador++;}if(contador==2){comprobar();}}	
+			function carta2(){if(contador==0){id1="carta2";}if(contador==1){id2="carta2";}if(contador<=1){document.getElementById("carta2").style.backgroundImage = matrImg[5];control1=2;contador++;}if(contador==2){comprobar();}}
+			function carta3(){if(contador==0){id1="carta3";}if(contador==1){id2="carta3";}if(contador<=1){document.getElementById("carta3").style.backgroundImage = matrImg[9];control1=3;contador++;}if(contador==2){comprobar();}}
+			function carta4(){if(contador==0){id1="carta4";}if(contador==1){id2="carta4";}if(contador<=1){document.getElementById("carta4").style.backgroundImage = matrImg[7];control1=4;contador++;}if(contador==2){comprobar();}}
+			function carta5(){if(contador==0){id1="carta5";}if(contador==1){id2="carta5";}if(contador<=1){document.getElementById("carta5").style.backgroundImage = matrImg[0];control1=5;contador++;}if(contador==2){comprobar();}}
+			function carta6(){if(contador==0){id1="carta6";}if(contador==1){id2="carta6";}if(contador<=1){document.getElementById("carta6").style.backgroundImage = matrImg[11];control1=6;contador++;}if(contador==2){comprobar();}}
+			function carta7(){if(contador==0){id1="carta7";}if(contador==1){id2="carta7";}if(contador<=1){document.getElementById("carta7").style.backgroundImage = matrImg[3];control1=7;contador++;}if(contador==2){comprobar();}}
+			function carta8(){if(contador==0){id1="carta8";}if(contador==1){id2="carta8";}if(contador<=1){document.getElementById("carta8").style.backgroundImage = matrImg[8];control1=8;contador++;}if(contador==2){comprobar();}}
+			function carta9(){if(contador==0){id1="carta9";}if(contador==1){id2="carta9";}if(contador<=1){document.getElementById("carta9").style.backgroundImage = matrImg[4];control1=9;contador++;;}if(contador==2){comprobar();}}
+			function carta10(){if(contador==0){id1="carta10";}if(contador==1){id2="carta10";}if(contador<=1){document.getElementById("carta10").style.backgroundImage = matrImg[10];control1=10;contador++;}if(contador==2){comprobar();}}
+			function carta11(){if(contador==0){id1="carta11";}if(contador==1){id2="carta11";}if(contador<=1){document.getElementById("carta11").style.backgroundImage = matrImg[6];control1=11;contador++;}if(contador==2){comprobar();}}
+			function carta12(){if(contador==0){id1="carta12";}if(contador==1){id2="carta12";}if(contador<=1){document.getElementById("carta12").style.backgroundImage = matrImg[1];control1=12;contador++;}if(contador==2){comprobar();}}
+			function carta13(){if(contador==0){id1="carta13";}if(contador==1){id2="carta13";}if(contador<=1){document.getElementById("carta13").style.backgroundImage = matrImg[11];control2=1;contador++;}if(contador==2){comprobar();}}
+			function carta14(){if(contador==0){id1="carta14";}if(contador==1){id2="carta14";}if(contador<=1){document.getElementById("carta14").style.backgroundImage = matrImg[6];control2=2;contador++;}if(contador==2){comprobar();}}
+			function carta15(){if(contador==0){id1="carta15";}if(contador==1){id2="carta15";}if(contador<=1){document.getElementById("carta15").style.backgroundImage = matrImg[2];control2=3;contador++;}if(contador==2){comprobar();}}
+			function carta16(){if(contador==0){id1="carta16";}if(contador==1){id2="carta16";}if(contador<=1){document.getElementById("carta16").style.backgroundImage = matrImg[8];control2=4;contador++;}if(contador==2){comprobar();}}
+			function carta17(){if(contador==0){id1="carta17";}if(contador==1){id2="carta17";}if(contador<=1){document.getElementById("carta17").style.backgroundImage = matrImg[9];control2=5;contador++;}if(contador==2){comprobar();}}
+			function carta18(){if(contador==0){id1="carta18";}if(contador==1){id2="carta18";}if(contador<=1){document.getElementById("carta18").style.backgroundImage = matrImg[1];control2=6;contador++;}if(contador==2){comprobar();}}
+			function carta19(){if(contador==0){id1="carta19";}if(contador==1){id2="carta19";}if(contador<=1){document.getElementById("carta19").style.backgroundImage = matrImg[5];control2=7;contador++;}if(contador==2){comprobar();}}
+			function carta20(){if(contador==0){id1="carta20";}if(contador==1){id2="carta20";}if(contador<=1){document.getElementById("carta20").style.backgroundImage = matrImg[0];control2=8;contador++;}if(contador==2){comprobar();}}
+			function carta21(){if(contador==0){id1="carta21";}if(contador==1){id2="carta21";}if(contador<=1){document.getElementById("carta21").style.backgroundImage = matrImg[3];control2=9;contador++;}if(contador==2){comprobar();}}
+			function carta22(){if(contador==0){id1="carta22";}if(contador==1){id2="carta22";}if(contador<=1){document.getElementById("carta22").style.backgroundImage = matrImg[4];control2=10;contador++;}if(contador==2){comprobar();}}
+			function carta23(){if(contador==0){id1="carta23";}if(contador==1){id2="carta23";}if(contador<=1){document.getElementById("carta23").style.backgroundImage = matrImg[10];control2=11;contador++;}if(contador==2){comprobar();}}
+			function carta24(){if(contador==0){id1="carta24";}if(contador==1){id2="carta24";}if(contador<=1){document.getElementById("carta24").style.backgroundImage = matrImg[7];control2=12;contador++;}if(contador==2){comprobar();}}
+			 
+			 function comprobar(){
+			 		
+				
+					
+				if(control1==1 && control2==3){contador=0;contadorAcierto++;if(contadorAcierto==12){window.alert("¡¡HAS GANADO!!");reset();}}
+				if(control1==2 && control2==7){contador=0;contadorAcierto++;if(contadorAcierto==12){window.alert("¡¡HAS GANADO!!");reset();}}
+				if(control1==3 && control2==5){contador=0;contadorAcierto++;if(contadorAcierto==12){window.alert("¡¡HAS GANADO!!");reset();}}
+				if(control1==4 && control2==12){contador=0;contadorAcierto++;if(contadorAcierto==12){window.alert("¡¡HAS GANADO!!");reset();}}
+				if(control1==5 && control2==8){contador=0;contadorAcierto++;if(contadorAcierto==12){window.alert("¡¡HAS GANADO!!");reset();}}
+				if(control1==6 && control2==1){contador=0;contadorAcierto++;if(contadorAcierto==12){window.alert("¡¡HAS GANADO!!");reset();}}
+				if(control1==7 && control2==9){contador=0;contadorAcierto++;if(contadorAcierto==12){window.alert("¡¡HAS GANADO!!");reset();}}
+				if(control1==8 && control2==4){contador=0;contadorAcierto++;if(contadorAcierto==12){window.alert("¡¡HAS GANADO!!");reset();}}
+				if(control1==9 && control2==10){contador=0;contadorAcierto++;if(contadorAcierto==12){window.alert("¡¡HAS GANADO!!");reset();}}
+				if(control1==10 && control2==11){contador=0;contadorAcierto++;if(contadorAcierto==12){window.alert("¡¡HAS GANADO!!");reset();}}
+				if(control1==11 && control2==2){contador=0;contadorAcierto++;if(contadorAcierto==12){window.alert("¡¡HAS GANADO!!");reset();}}
+				if(control1==12 && control2==6){contador=0;contadorAcierto++;if(contadorAcierto==12){window.alert("¡¡HAS GANADO!!");reset();}}
+				
+				if(control1==1 && control2!=3){espera();document.getElementById(id1).style.backgroundImage = "url('dorso.jpg')";document.getElementById(id2).style.backgroundImage = "url('dorso.jpg')";contador=0;contadorFallo--;if(contadorFallo==0){window.alert("¡¡HAS PERDIDO!!");reset();}}
+				if(control1==2 && control2!=7){espera();document.getElementById(id1).style.backgroundImage = "url('dorso.jpg')";document.getElementById(id2).style.backgroundImage = "url('dorso.jpg')";contador=0;contadorFallo--;if(contadorFallo==0){window.alert("¡¡HAS PERDIDO!!");reset();}}
+				if(control1==3 && control2!=5){espera();document.getElementById(id1).style.backgroundImage = "url('dorso.jpg')";document.getElementById(id2).style.backgroundImage = "url('dorso.jpg')";contador=0;contadorFallo--;if(contadorFallo==0){window.alert("¡¡HAS PERDIDO!!");reset();}}
+				if(control1==4 && control2!=12){espera();document.getElementById(id1).style.backgroundImage = "url('dorso.jpg')";document.getElementById(id2).style.backgroundImage = "url('dorso.jpg')";contador=0;contadorFallo--;if(contadorFallo==0){window.alert("¡¡HAS PERDIDO!!");reset();}}
+				if(control1==5 && control2!=8){espera();document.getElementById(id1).style.backgroundImage = "url('dorso.jpg')";document.getElementById(id2).style.backgroundImage = "url('dorso.jpg')";contador=0;contadorFallo--;if(contadorFallo==0){window.alert("¡¡HAS PERDIDO!!");reset();}}
+				if(control1==6 && control2!=1){espera();document.getElementById(id1).style.backgroundImage = "url('dorso.jpg')";document.getElementById(id2).style.backgroundImage = "url('dorso.jpg')";contador=0;contadorFallo--;if(contadorFallo==0){window.alert("¡¡HAS PERDIDO!!");reset();}}
+				if(control1==7 && control2!=9){espera();document.getElementById(id1).style.backgroundImage = "url('dorso.jpg')";document.getElementById(id2).style.backgroundImage = "url('dorso.jpg')";contador=0;contadorFallo--;if(contadorFallo==0){window.alert("¡¡HAS PERDIDO!!");reset();}}
+				if(control1==8 && control2!=4){espera();document.getElementById(id1).style.backgroundImage = "url('dorso.jpg')";document.getElementById(id2).style.backgroundImage = "url('dorso.jpg')";contador=0;contadorFallo--;if(contadorFallo==0){window.alert("¡¡HAS PERDIDO!!");reset();}}
+				if(control1==9 && control2!=10){espera();document.getElementById(id1).style.backgroundImage = "url('dorso.jpg')";document.getElementById(id2).style.backgroundImage = "url('dorso.jpg')";contador=0;contadorFallo--;if(contadorFallo==0){window.alert("¡¡HAS PERDIDO!!");reset();}}
+				if(control1==10 && control2!=11){espera();document.getElementById(id1).style.backgroundImage = "url('dorso.jpg')";document.getElementById(id2).style.backgroundImage = "url('dorso.jpg')";contador=0;contadorFallo--;if(contadorFallo==0){window.alert("¡¡HAS PERDIDO!!");reset();}}
+				if(control1==11 && control2!=2){espera();document.getElementById(id1).style.backgroundImage = "url('dorso.jpg')";document.getElementById(id2).style.backgroundImage = "url('dorso.jpg')";contador=0;contadorFallo--;if(contadorFallo==0){window.alert("¡¡HAS PERDIDO!!");reset();}}
+				if(control1==12 && control2!=6){espera();document.getElementById(id1).style.backgroundImage = "url('dorso.jpg')";document.getElementById(id2).style.backgroundImage = "url('dorso.jpg')";contador=0;contadorFallo--;if(contadorFallo==0){window.alert("¡¡HAS PERDIDO!!");reset();}}
+			 
+				document.getElementById("intentos").innerHTML=contadorFallo;
+				
+			 }
+			 
+			 function reset(){
+				
+				document.getElementById("carta1").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta2").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta3").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta4").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta5").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta6").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta7").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta8").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta9").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta10").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta11").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta12").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta13").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta14").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta15").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta16").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta17").style.backgroundImage = "url('dorso.jpg')"; 
+				document.getElementById("carta18").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta19").style.backgroundImage = "url('dorso.jpg')"; 
+				document.getElementById("carta20").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta21").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta22").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta23").style.backgroundImage = "url('dorso.jpg')";
+				document.getElementById("carta24").style.backgroundImage = "url('dorso.jpg')";
+
+				contador=0;
+				contadorFallo=0;
+				control1=0;
+				control2=0;
+				contador=0;
+				contadorFallo=5;
+				contadorAcierto=0;
+				acierto=0;
+				id1="";
+				id2="";
+				 
+			 }
+			 
+	   </script>
+	   
+	</head>
+	
+	<style>
+	
+	body{
+		
+		background-color:#388E3C;
+	
+	}
+	
+	#caja{
+	
+		margin-top:30px;
+		
+	}
+	
+	#caja2{
+	
+		margin-top:30px;
+		margin-bottom:20px;
+		
+	}
+	
+	#caja3{
+	
+		margin-top:30px;
+		
+	}
+	
+	#caja4{
+	
+		margin-top:30px;
+		margin-bottom:20px;
+		
+	}
+	
+	#caja5{
+		
+		background-image:url("tapete.jpg");
+		width:500px;
+		margin-top:20px;
+		border:solid 4px black;
+	
+	}
+	
+	#caja6{
+		
+		background-image:url("tapete.jpg");
+		width:500px;
+		margin-top:20px;
+		border:solid 4px black;
+	
+	}
+	
+	#carta1{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	
+	#carta2{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta3{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta4{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta5{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta6{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta7{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta8{
+
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta9{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta10{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta11{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta12{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	
+	#carta13{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	
+	#carta14{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta15{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta16{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta17{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta18{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta19{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta20{
+
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta21{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta22{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta23{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+	#carta24{
+	
+		background-image:url('dorso.jpg');
+		height:95px;
+		width:70px;
+	}
+
+	#reset{
+	
+		width:150px;
+		height:50px;
+		background-color:#FF7043;
+	
+	}
+	
+	#intentos{
+	
+		width:150px;
+		height:150px;
+		float:right;
+		border: solid 4px black;
+		margin-top:210px;
+		margin-right:150px;
+		border-radius:100px;
+		font-family:Broadway;
+	    text-align:center;
+		font-size:95pt;
+			
+	}
+	
+	</style>
+	
+	<body>
+	<div id="intentos"></div>
+	
+		<center>
+		<div id="caja5">
+		<div id="caja">
+		<input type="button" id="carta1" name="c1" onclick="carta1()">
+		<input type="button" id="carta2" name="c1" onclick="carta2()">
+		<input type="button" id="carta3" name="c1" onclick="carta3()">
+		<input type="button" id="carta4" name="c1" onclick="carta4()">
+		<input type="button" id="carta5" name="c1" onclick="carta5()">
+		<input type="button" id="carta6" name="c1" onclick="carta6()">
+		</div>
+		<div id="caja2">
+		<input type="button" id="carta7" name="c1" onclick="carta7()">
+		<input type="button" id="carta8" name="c1" onclick="carta8()">
+		<input type="button" id="carta9" name="c1" onclick="carta9()">
+		<input type="button" id="carta10" name="c1" onclick="carta10()">
+		<input type="button" id="carta11" name="c1" onclick="carta11()">
+		<input type="button" id="carta12" name="c1" onclick="carta12()">
+		</div>
+		</div>
+		<div id="caja6">
+		<div id="caja3">
+		<input type="button" id="carta13" name="c1" onclick="carta13()">
+		<input type="button" id="carta14" name="c1" onclick="carta14()">
+		<input type="button" id="carta15" name="c1" onclick="carta15()">
+		<input type="button" id="carta16" name="c1" onclick="carta16()">
+		<input type="button" id="carta17" name="c1" onclick="carta17()">
+		<input type="button" id="carta18" name="c1" onclick="carta18()">
+		</div>
+		<div id="caja4">
+		<input type="button" id="carta19" name="c1" onclick="carta19()">
+		<input type="button" id="carta20" name="c1" onclick="carta20()">
+		<input type="button" id="carta21" name="c1" onclick="carta21()">
+		<input type="button" id="carta22" name="c1" onclick="carta22()">
+		<input type="button" id="carta23" name="c1" onclick="carta23()">
+		<input type="button" id="carta24" name="c1" onclick="carta24()">
+		</div>
+		</div>
+		</center>
+
+		<input type="button" id="reset" name="com1" value="RESET" onclick="reset()">
+		
+	</body>
+	
+</html>

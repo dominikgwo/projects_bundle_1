@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            width: 300px;
+            < !--background-color: #F0F0F0;
+             !-->font-size: 12px;
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0 10px 0 10px;
+            background: linear-gradient(to bottom, #cedce7 0%, #596a72 100%);
+        }
+
+        p.box {
+            background-color: #F0F0F0;
+            background: linear-gradient(gray, white);
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #606060;
+            font-size: 100%;
+            font-family: verdana;
+            box-sizing: border-box;
+            width: 85%;
+
+        }
+
+        p.boxsh {
+
+            background-color: #F0F0F0;
+            background: linear-gradient(gray, white);
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #606060;
+            font-size: 100%;
+            font-family: verdana;
+            box-sizing: border-box;
+            width: 85%;
+            display: none;
+
+        }
+
+
+
+
+
+        a.redlink {
+            color: #FF0000;
+
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            margin: 10px 0;
+        }
+
+
+        table,
+        th,
+        td {
+            font-family: verdana;
+            font-weight: 900;
+        }
+
+
+        td:hover {
+            background-color: silver;
+        }
+
+
+
+        input {
+            background-color: #BFBDBD;
+            border: solid 1px #BFBDBD;
+            color: #979797;
+            height: 28px;
+            padding-left: 10px;
+            width: 191px;
+            box-shadow: 2px 2px 0 #828181 inset;
+            width: 10%;
+        }
+
+
+
+        button {
+            -moz-box-shadow: 0px 10px 14px -7px #3e7327;
+            -webkit-box-shadow: 0px 10px 14px -7px #3e7327;
+            box-shadow: 0px 10px 14px -7px #3e7327;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #77b55a), color-stop(1, #72b352));
+            background: -moz-linear-gradient(top, #77b55a 5%, #72b352 100%);
+            background: -webkit-linear-gradient(top, #77b55a 5%, #72b352 100%);
+            background: -o-linear-gradient(top, #77b55a 5%, #72b352 100%);
+            background: -ms-linear-gradient(top, #77b55a 5%, #72b352 100%);
+            background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#77b55a', endColorstr='#72b352', GradientType=0);
+            background-color: #77b55a;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            border: 1px solid #4b8f29;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px 12px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #5b8a3c;
+        }
+
+        button:hover {
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72b352), color-stop(1, #77b55a));
+            background: -moz-linear-gradient(top, #72b352 5%, #77b55a 100%);
+            background: -webkit-linear-gradient(top, #72b352 5%, #77b55a 100%);
+            background: -o-linear-gradient(top, #72b352 5%, #77b55a 100%);
+            background: -ms-linear-gradient(top, #72b352 5%, #77b55a 100%);
+            background: linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#72b352', endColorstr='#77b55a', GradientType=0);
+            background-color: #72b352;
+        }
+
+        button:active {
+            position: relative;
+            top: 1px;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            margin-top: 10px;
+        }
+
+
+        .reminder {
+            display: none;
+
+        }
+
+
+        .alarms {
+            -moz-box-shadow: inset 0px 1px 0px 0px #a4e271;
+            -webkit-box-shadow: inset 0px 1px 0px 0px #a4e271;
+            box-shadow: inset 0px 1px 0px 0px #a4e271;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #89c403), color-stop(1, #77a809));
+            background: -moz-linear-gradient(top, #89c403 5%, #77a809 100%);
+            background: -webkit-linear-gradient(top, #89c403 5%, #77a809 100%);
+            background: -o-linear-gradient(top, #89c403 5%, #77a809 100%);
+            background: -ms-linear-gradient(top, #89c403 5%, #77a809 100%);
+            background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#89c403', endColorstr='#77a809', GradientType=0);
+            background-color: #89c403;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            border: 1px solid #74b807;
+            display: block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 11px;
+            font-weight: bold;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #528009;
+            opacity: 0.3;
+        }
+
+
+        .alarms:hover {
+            opacity: 1;
+        }
+
+
+
+
+
+        .audio {
+            background: url("audio_on_off.png") no-repeat 0;
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .muted .audio {
+            background-position: -16px 0;
+        }
+
+
+
+
+
+        .bookmark {
+            background: url("bookmark_on_off.png") no-repeat 0;
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .bookmarkoff .bookmark {
+            background-position: -16px 0;
+        }
+
+
+        .bookmarkremove .bookmark {
+            background-position: -16px 0;
+            background-color: rgb(245, 0, 0);
+        }
+
+        .buttonpause:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+		<!--0!-->
+    <script src="js/popup.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+
+
+</head>
+
+<body>
+	
+	<!--1!-->
+    <p class='box' id='windowTabs'>
+        <div id='texto'> </div>
+    </p>
+
+    <table id='tabsTable'>
+        <ul id="audio_list"></ul>
+		
+		
+    </table>
+    <img src="/close.png" id="close" alt="close1" data-toggle="tooltip" title="close All tab" style="width:17px;height:17px;" />
+    <img src="/restore.png" id="restore" alt="restore1" data-toggle="tooltip" title="restore closed tab" style="width:17px;height:17px;" />
+
+	<!--2!-->
+    <p class='box' id='windowTabs1'></p>
+    <div id='texto1'> </div>
+	
+	
+    <table id='tabsTable1'>
+        <ul id="audio_list"></ul>
+    </table>
+	
+	
+    <img src="/close.png" id="close2" alt="close2" data-toggle="tooltip" title="close All tab" style="width:17px;height:17px;" />
+    <img src="/restore.png" id="restore2" alt="restore2" data-toggle="tooltip" title="restore closed tab" style="width:17px;height:17px;" />
+    <img src="/pause.png" id="pause" alt="pause1" data-toggle="tooltip" title="pause Youtube Videos" style="width:17px;height:17px;" class="buttonpause" />
+    <img src="/reload.png" id="reload" alt="reload" data-toggle="tooltip" title="reload popup" style="width:17px;height:17px;" class="buttonpause" />
+    <img src="/unmute.png" id="muteall" alt="muteall" data-toggle="tooltip" title="toggle mute/unmute all tabs" style="width:17px;height:17px;" />
+	<img src="/pin.png" id="pinall" alt="pinall" data-toggle="tooltip" title="pin all tabs" style="width:17px;height:17px;" />
+
+
+    <br>
+		<!--3!-->
+    <div id='copyinfo'> </div>
+
+
+
+    <br>
+    <br>
+</body>
+
+
+
+
+
+</ul>
+	<!--1!-->
+<p class='alarms' id='alarms'>ALARM <br>
+	
+	Hours: <input type="text" name="hours1" id="hourspop" value="00" maxlength="2"> 
+	Minutes: <input type="text" value="00" name="minutes1" id="minutespop" maxlength="2">
+	Seconds: <input type="text" value="30" name="seconds1" id="secondspop" maxlength="2">
+	<br> <br> <br>
+
+    <button id="clearcount"> Clear Time  </button>
+    <button id="pausetime"> Pause Time  </button>
+    <button id="resumetime"> Resume Time  </button>
+    <button id="save"> Set Alarm </button>
+    <button id="clear"> Clear Alarm  </button>
+
+    <br>
+    <br>
+
+    <button id="alarmOff1"> ReminderOff  </button>
+	<button id="alarmOn1" class="reminder"> ReminderOn  </button>
+
+	Reminder Delay: <input type="text" name="reminder" id="delay" value="0.1" class="reminder"><br>
+
+</p>
+
+
+
+
+<!--2!-->
+
+
+<br>
+<br>
+
+
+
+<div id="status"></div> <!--"Options Saved"!-->
+<img src="hide.png" id="hide" style="width:14px;height:14px;" class="center" data-toggle="tooltip" title="Show Shortcuts"><!--"Shortcuts1"!-->
+
+<div id=text1>
+    <p class='boxsh' id='shortcs'></p><!--"Shortcuts2"!-->
+</div>
+
+<input id="njrz" style="opacity:0" /> <!--"elemento invisible"--!>
+	
+	
+<!-- no funcionan hidden o display none !-->
+
+
+</html>
+
+
+
